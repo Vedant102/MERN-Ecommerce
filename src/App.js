@@ -6,18 +6,21 @@ import Order from "./components/Order";
 import Product from "./components/Product";
 import Products from "./components/Products";
 import Signup from "./components/Signup";
+import Navbar from "./layouts/navbar";
+import {Routes,Route} from 'react-router-dom'
+import PrivateRoute from "./Routing/PrivateRoute";
 
 const App = () =>{
   return (
     <div>
-      <Home/>
-      <Login/>
-      <Signup/>
-      <Products/>
-      <Product/>
-      <Myorder/>
-      <Order/>
-      <Admin/>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/Login' element={<PrivateRoute child={<Login/>}/>}/>
+        <Route path='/Signup' element={<Signup/>} />
+        <Route path='/products' element={<Products/>} />
+        <Route path='/admin' element={<Admin/>} />
+      </Routes> 
     </div>
   );
 }

@@ -1,8 +1,8 @@
 const initialState = {
-  token: 'dafadfafsdasdf'
+  catogeries: []
 } 
 
-const authReducer = (state = initialState,action) => {
+const categoriesReducer = (state = initialState,action) => {
   const {type, payload} = action
 
   switch(type){
@@ -10,4 +10,4 @@ const authReducer = (state = initialState,action) => {
       return state
   }
 }
-export default authReducer;
+export default categoriesReducer;
