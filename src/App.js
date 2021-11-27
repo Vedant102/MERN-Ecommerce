@@ -9,6 +9,7 @@ import Signup from "./components/Signup";
 import Navbar from "./layouts/navbar";
 import {Routes,Route} from 'react-router-dom'
 import PrivateRoute from "./Routing/PrivateRoute";
+import Footer from "./layouts/footer";
 
 const App = () =>{
   return (
@@ -16,11 +17,12 @@ const App = () =>{
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/Login' element={<PrivateRoute child={<Login/>}/>}/>
+        <Route path='/Login' element={<Login/>}/>
         <Route path='/Signup' element={<Signup/>} />
         <Route path='/products' element={<Products/>} />
         <Route path='/admin' element={<Admin/>} />
       </Routes> 
+      <Footer/>
     </div>
   );
 }
