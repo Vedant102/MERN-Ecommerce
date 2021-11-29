@@ -10,10 +10,12 @@ import Navbar from "./layouts/navbar";
 import {Routes,Route} from 'react-router-dom'
 import PrivateRoute from "./Routing/PrivateRoute";
 import Footer from "./layouts/footer";
+import { Toaster } from "react-hot-toast";
 
 const App = () =>{
   return (
     <div>
+      <div><Toaster/></div>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
