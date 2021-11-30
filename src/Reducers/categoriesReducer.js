@@ -1,8 +1,8 @@
 const initialState = {
-  isLoading: false,
+  categories: [],
 };
 
-const loaderReducer = (state = initialState, action) => {
+const categoriesReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -11,4 +11,4 @@ const loaderReducer = (state = initialState, action) => {
   }
 };
 
-export default loaderReducer;
+export default categoriesReducer;
